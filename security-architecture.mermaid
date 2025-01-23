@@ -1,39 +1,14 @@
-flowchart TB
-    subgraph Access["Access Control Layer"]
-        HID["HID Mobile Access"]
-        Bio["Biometric Systems"]
-        RFID["RFID Systems"]
-    end
-
-    subgraph Detection["Detection Layer"]
-        Cameras["Security Cameras"]
-        Sensors["IoT Sensors"]
-        Drones["Aerial Surveillance"]
-    end
-
-    subgraph Processing["Processing Layer"]
-        Analytics["Analytics Engine"]
-        AI["AI/ML Processing"]
-        Stream["Stream Processing"]
-    end
-
-    subgraph Integration["Integration Layer"]
-        Platform["Security Platform"]
-        Database["Security Database"]
-        API["API Gateway"]
-    end
-
-    subgraph Apps["Application Layer"]
-        Dashboard["Security Dashboard"]
-        Mobile["Mobile Apps"]
-        Alerts["Alert System"]
-    end
-
-    Access --> Detection
-    Detection --> Processing
-    Processing --> Integration
-    Integration --> Apps
+graph TD
+    A[IoT Access Control Initialization] --> B[Authentication Layer]
+    B --> C[Biometric Verification]
+    B --> D[Multi-Factor Authentication]
     
-    API --> Mobile
-    Platform --> Dashboard
-    Analytics --> Alerts
+    C --> E[Identity Validation]
+    D --> E
+    
+    E --> F[Network Security Check]
+    F --> G[Cloud Management]
+    
+    G --> H{Access Determination}
+    H --> |Approved| I[Resource Access]
+    H --> |Denied| J[Threat Logging]
