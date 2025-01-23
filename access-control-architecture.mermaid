@@ -1,0 +1,35 @@
+flowchart TB
+    subgraph Physical["Physical Access Devices"]
+        direction TB
+        Reader["Card Readers"]
+        Bio["Biometric Scanners"]
+        Mobile["Mobile Devices"]
+        Cameras["Security Cameras"]
+    end
+
+    subgraph Controller["Access Control Units"]
+        ACU["Main Control Unit"]
+        DoorC["Door Controllers"]
+        ZoneC["Zone Controllers"]
+        TimeC["Time Attendance"]
+    end
+
+    subgraph Server["Server Components"]
+        DB["Database"]
+        Auth["Authentication Server"]
+        API["API Gateway"]
+        Analytics["Analytics Engine"]
+    end
+
+    subgraph Apps["Applications"]
+        Admin["Admin Console"]
+        Monitor["Monitoring Dashboard"]
+        Mobile_App["Mobile App"]
+        Reports["Reporting Tools"]
+    end
+
+    Physical --> Controller
+    Controller --> Server
+    Server --> Apps
+
+    class Physical,Controller,Server,Apps baseClass

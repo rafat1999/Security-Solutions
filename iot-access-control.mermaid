@@ -1,0 +1,29 @@
+flowchart TB
+    subgraph IoTDevices["IoT Access Devices"]
+        MobileAuth["Mobile Authentication"]
+        BioReader["Biometric Readers"]
+        SmartLocks["Smart Locks"]
+        Sensors["Environmental Sensors"]
+    end
+
+    subgraph NetworkLayer["Network Layer"]
+        Gateway["IoT Gateway"]
+        Firewall["Security Firewall"]
+        Encryption["Data Encryption"]
+    end
+
+    subgraph CloudPlatform["Cloud Management"]
+        AuthServer["Authentication Server"]
+        RealTime["Real-time Analytics"]
+        PolicyEngine["Access Policy Engine"]
+    end
+
+    subgraph SecurityControls["Security Controls"]
+        MultiFA["Multi-Factor Authentication"]
+        RiskAnalytics["Risk Assessment"]
+        AnomalyDetection["Anomaly Detection"]
+    end
+
+    IoTDevices --> NetworkLayer
+    NetworkLayer --> CloudPlatform
+    CloudPlatform --> SecurityControls
