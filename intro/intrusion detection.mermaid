@@ -1,0 +1,19 @@
+graph TD
+    A[Sensor Network Activation] --> B[Data Collection]
+    B --> C{Anomaly Detection}
+    
+    C --> |Object Detected| D[Avigilon AI Classification]
+    C --> |Movement Detected| E[Genetec Security Analysis]
+    C --> |Environmental Change| F[Bosch System Monitoring]
+    
+    D --> G{Threat Assessment}
+    E --> G
+    F --> G
+    
+    G --> |High Risk| H[Immediate Alert]
+    G --> |Medium Risk| I[Detailed Investigation]
+    G --> |Low Risk| J[Standard Logging]
+    
+    H --> K[Emergency Response Protocol]
+    I --> L[Security Team Notification]
+    J --> M[Periodic Review]
