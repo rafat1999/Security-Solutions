@@ -1,29 +1,15 @@
-flowchart TB
-    subgraph Sensors["IoT Sensor Layer"]
-        MotionS["Motion Sensors"]
-        CameraS["Smart Cameras"]
-        AudioS["Sound Sensors"]
-        EnvS["Environmental Sensors"]
-    end
-
-    subgraph Processing["Processing & Analysis Layer"]
-        EdgeComp["Edge Computing"]
-        AIEngine["AI Detection Engine"]
-        Correlation["Threat Correlation"]
-    end
-
-    subgraph Security["Security Management"]
-        Firewall["IoT Firewall"]
-        Encryption["Data Encryption"]
-        Authentication["Multi-Factor Auth"]
-    end
-
-    subgraph Response["Response & Notification"]
-        AlertSys["Alert System"]
-        MobileNotif["Mobile Notifications"]
-        CommandCenter["Security Operations"]
-    end
-
-    Sensors --> Processing
-    Processing --> Security
-    Security --> Response
+graph TD
+    A[IoT Security Initialization] --> B{Risk Assessment}
+    B --> |High Risk| C[Advanced Threat Protection]
+    B --> |Medium Risk| D[Standard Security Measures]
+    B --> |Low Risk| E[Basic Protection Protocols]
+    
+    C --> F[Multi-Layer Defense Deployment]
+    D --> F
+    E --> F
+    
+    F --> G[Continuous Monitoring]
+    G --> H[Threat Detection]
+    H --> I[Automated Response Mechanism]
+    I --> J[Security Optimization]
+    J --> |Periodic Review| B
