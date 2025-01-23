@@ -1,0 +1,15 @@
+graph TD
+    A[Access Request Initiated] --> B{Authentication Method}
+    B --> |Mobile ID| C[HID Mobile Access Verification]
+    B --> |Biometric| D[Fingerprint/Face Scan]
+    B --> |Physical Card| E[RFID/NFC Validation]
+    
+    C --> F{Credential Validation}
+    D --> F
+    E --> F
+    
+    F --> |Approved| G[Access Granted]
+    F --> |Denied| H[Access Blocked]
+    
+    G --> I[Log Entry Created]
+    H --> J[Security Alert Triggered]
