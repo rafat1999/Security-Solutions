@@ -1,0 +1,20 @@
+graph TD
+    A[ID Verification Request] --> B{Verification Method}
+    
+    B --> |Face Recognition| C[Amazon Rekognition]
+    B --> |Fingerprint| D[HID DigitalPersona]
+    B --> |Voice| E[Nuance Gatekeeper]
+    B --> |Document| F[Access-IS ATOM Reader]
+    
+    C --> G[Biometric Matching]
+    D --> G
+    E --> G
+    F --> G
+    
+    G --> H{Verification Status}
+    
+    H --> |Verified| I[Access Permitted]
+    H --> |Unverified| J[Access Denied]
+    
+    I --> K[User Session Initiated]
+    J --> L[Security Alert Generated]
