@@ -1,0 +1,22 @@
+graph TD
+    A[Event Detection] --> B{Event Type}
+    
+    B --> |Missing Item| C[IDIS Deep Learning Analytics]
+    B --> |PPE Check| D[Cognyte Situator]
+    B --> |Performance| E[Milestone XProtect]
+    
+    C --> F[Notification Generation]
+    D --> F
+    E --> F
+    
+    F --> G{Notification Channel}
+    
+    G --> |Mobile App| H[Push Notification]
+    G --> |Email| I[Email Alert]
+    G --> |SMS| J[Text Message]
+    
+    H --> K[User Acknowledgement]
+    I --> K
+    J --> K
+    
+    K --> L[Response Tracking]
