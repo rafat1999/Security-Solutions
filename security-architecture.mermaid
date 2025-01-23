@@ -1,0 +1,39 @@
+flowchart TB
+    subgraph Access["Access Control Layer"]
+        HID["HID Mobile Access"]
+        Bio["Biometric Systems"]
+        RFID["RFID Systems"]
+    end
+
+    subgraph Detection["Detection Layer"]
+        Cameras["Security Cameras"]
+        Sensors["IoT Sensors"]
+        Drones["Aerial Surveillance"]
+    end
+
+    subgraph Processing["Processing Layer"]
+        Analytics["Analytics Engine"]
+        AI["AI/ML Processing"]
+        Stream["Stream Processing"]
+    end
+
+    subgraph Integration["Integration Layer"]
+        Platform["Security Platform"]
+        Database["Security Database"]
+        API["API Gateway"]
+    end
+
+    subgraph Apps["Application Layer"]
+        Dashboard["Security Dashboard"]
+        Mobile["Mobile Apps"]
+        Alerts["Alert System"]
+    end
+
+    Access --> Detection
+    Detection --> Processing
+    Processing --> Integration
+    Integration --> Apps
+    
+    API --> Mobile
+    Platform --> Dashboard
+    Analytics --> Alerts
