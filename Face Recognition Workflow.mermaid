@@ -1,0 +1,8 @@
+graph TD
+    A[Facial Input] --> B[Facial Landmark Detection]
+    B --> C[Feature Vector Extraction]
+    C --> D[Biometric Template Creation]
+    D --> E[Database Comparison]
+    E --> F{Matching Confidence}
+    F --> |High Match| G[Identity Confirmation]
+    F --> |Low Match| H[Potential Threat Flagging]
