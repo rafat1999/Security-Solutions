@@ -1,0 +1,20 @@
+graph TD
+    A[Data Collection] --> B[Briefcam VIDEO SYNOPSIS]
+    
+    B --> C{Analytics Type}
+    
+    C --> |Customer Movement| D[Sensum Crowd Analytics]
+    C --> |Peak Times| E[Qognify Situator]
+    C --> |Workflow| F[Genetec Mission Control]
+    
+    D --> G[Visualization]
+    E --> G
+    F --> G
+    
+    G --> H[Insights Generation]
+    
+    H --> I{Action Recommendation}
+    
+    I --> |Layout Optimization| J[Store Redesign]
+    I --> |Staffing| K[Resource Allocation]
+    I --> |Marketing| L[Targeted Campaigns]
