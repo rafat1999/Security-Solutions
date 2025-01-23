@@ -1,0 +1,7 @@
+graph TD
+    A[Input Stream] --> B[Object Preprocessing]
+    B --> C[Feature Extraction]
+    C --> D[Machine Learning Classification]
+    D --> E{Object Identification}
+    E --> |Recognized| F[Alert/Logging]
+    E --> |Unrecognized| G[Anomaly Flagging]
