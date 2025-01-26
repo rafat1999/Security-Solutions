@@ -1,0 +1,25 @@
+flowchart TD
+    A[IoT Sensor Network] --> B{Central Security Hub}
+    
+    subgraph Sensors
+    A1[Motion Sensors]
+    A2[Vibration Detectors]
+    A3[Emergency Alert Lights]
+    A4[Drone Surveillance]
+    end
+    
+    B --> C{Threat Analysis}
+    C -->|Potential Threat Detected| D[AI-Powered Risk Assessment]
+    C -->|Normal Conditions| E[Continuous Monitoring]
+    
+    D --> F{Threat Level Evaluation}
+    F -->|High Risk| G[Immediate Alert System]
+    F -->|Medium Risk| H[Enhanced Monitoring]
+    F -->|Low Risk| E
+    
+    G --> I[Emergency Response Coordination]
+    I --> J[Dispatch Security Personnel]
+    I --> K[Activate Drone Surveillance]
+    
+    K --> L[Real-time Threat Tracking]
+    L --> M[Incident Documentation]
