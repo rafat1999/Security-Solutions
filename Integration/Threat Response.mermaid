@@ -1,0 +1,29 @@
+flowchart TD
+    A[IoT Sensors Detect Anomaly] --> B{Initial Screening}
+    
+    B -->|False Alarm| C[Reset and Continue Monitoring]
+    B -->|Potential Threat| D[Data Correlation]
+    
+    D --> E{Threat Verification}
+    E -->|Confirmed Threat| F[Activate Emergency Protocols]
+    E -->|Inconclusive| G[Enhanced Monitoring]
+    
+    F --> H[Alert Security Team]
+    H --> I[Drone Deployment]
+    I --> J[Real-time Threat Assessment]
+    
+    J --> K{Threat Severity}
+    K -->|High Severity| L[Immediate Intervention]
+    K -->|Medium Severity| M[Strategic Response]
+    K -->|Low Severity| N[Containment Strategy]
+    
+    L --> O[Direct Security Personnel Dispatch]
+    M --> P[Coordinated Response Plan]
+    N --> Q[Continued Surveillance]
+    
+    O --> R[Incident Resolution]
+    P --> R
+    Q --> R
+    
+    R --> S[Incident Report Generation]
+    S --> T[System Reset and Continue Monitoring]
